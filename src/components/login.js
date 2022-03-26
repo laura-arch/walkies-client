@@ -3,6 +3,7 @@ import Logo from "../walkieslogo.png"
 
 function Login() {
     return (
+
         <section classname = "fullpage">
             <div>
                 <img src={Logo} alt = "Walkies Logo" />
@@ -23,3 +24,4 @@ function Login() {
 }
 
 export default Login
+
