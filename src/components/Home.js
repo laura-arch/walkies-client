@@ -6,6 +6,7 @@ import Rex from "../Rex.jpg"
 import Marley from "../MarleyFam.jpg"
 import "../home.css"
 
+
 <link rel="stylesheet" href="home.css"></link>
 
 function Home() {
