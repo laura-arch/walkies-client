@@ -1,6 +1,8 @@
+import React from "react";
+
 function Doggo() {
     return (
-        <div>Hello</div>
+        <div>Helloooooooooooooo</div>
     )
 }
 
