@@ -1,7 +1,153 @@
-function Register() {
-    return (
-        <div>Hello</div>
-    )
-}
+import { useState } from 'react';
+import '../Register.css'
 
-export default Register
+
+export default function Register() {
+
+    // States for registration
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [profilePic, setProfilePic] = useState('')
+    const [location, setLocation] = useState('')
+    const [aboutMe, setAboutMe] = useState('')
+    const [availability, setAvailability] = useState('')
+    const [role, setRole] = useState('')
+
+    // States for checking the errors
+    const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState(false);
+
+    // Handling the name change
+    const handleName = (e) => {
+        setName(e.target.value);
+        setSubmitted(false);
+    };
+
+    // Handling the email change
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+        setSubmitted(false);
+    };
+
+    // Handling the password change
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleProfilePic = (e) => {
+        setProfilePic(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleLocation = (e) => {
+        setLocation(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleAboutMe = (e) => {
+        setAboutMe(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleAvailability = (e) => {
+        setAvailability(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleRole = (e) => {
+        setRole(e.target.value);
+        setSubmitted(false);
+    };
+
+    // Handling the form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (name === '' || email === '' || password === '' || profilePic === '' || location === '' || aboutMe === '' || availability === '' || role === '') {
+            setError(true);
+        } else {
+            setSubmitted(true);
+            setError(false);
+        }
+    };
+
+    // Showing success message
+    const successMessage = () => {
+        return (
+            <div
+                className="success"
+                style={{
+                    display: submitted ? '' : 'none',
+                }}>
+                <h1>User {name} successfully registered!!</h1>
+            </div>
+        );
+    };
+
+    // Showing error message if error is true
+    const errorMessage = () => {
+        return (
+            <div
+                className="error"
+                style={{
+                    display: error ? '' : 'none',
+                }}>
+                <h1>Please enter all the fields</h1>
+            </div>
+        );
+    };
+
+    return (
+        <div className="form">
+            <div>
+                <h1>User Registration</h1>
+            </div>
+
+            {/* Calling to the methods */}
+            <div className="messages">
+                {errorMessage()}
+                {successMessage()}
+            </div>
+
+            <form>
+                {/* Labels and inputs for form data */}
+                <label className="label">Name</label>
+                <input onChange={handleName} className="input"
+                    value={name} type="text" />
+
+                <label className="label">Email</label>
+                <input onChange={handleEmail} className="input"
+                    value={email} type="email" />
+
+                <label className="label">Password</label>
+                <input onChange={handlePassword} className="input"
+                    value={password} type="password" />
+
+                <label className="label">Profile picture</label>
+                <input onChange={handleProfilePic} className="input"
+                    value={profilePic} type="text" />
+
+                <label className="label">Location</label>
+                <input onChange={handleLocation} className="input"
+                    value={location} type="text" />
+
+                <label className="label">About Me:</label>
+                <input onChange={handleAboutMe} className="input"
+                    value={aboutMe} type="text" />
+
+                <label className="label">Availability</label>
+                <input onChange={handleAvailability} className="input"
+                    value={availability} type="text" />
+
+                <label className="label">Are you a</label>
+                <input onChange={handleRole} className="input"
+                    value={role} type="text" />
+
+                <button onClick={handleSubmit} className="btn" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    );
+}
