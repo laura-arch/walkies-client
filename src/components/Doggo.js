@@ -1,7 +1,7 @@
-function Dogs() {
+function Doggo() {
     return (
         <div>Hello</div>
     )
 }
 
-export default Dogs
+export default Doggo

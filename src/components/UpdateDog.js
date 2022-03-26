@@ -1,7 +1,7 @@
-function Dogs() {
+function UpdateDog() {
     return (
         <div>Hello</div>
     )
 }
 
-export default Dogs
+export default UpdateDog
