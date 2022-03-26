@@ -1,5 +1,6 @@
 # Getting Started with Create React Apppppp
-# Laura
+
+# Changes in branch
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
