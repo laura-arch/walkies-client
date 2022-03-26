@@ -124,7 +124,7 @@ export default function Register() {
                 <input onChange={handlePassword} className="input"
                     value={password} type="password" />
 
-                <label className="label">Profile picture</label>
+                <label className="label">Profile picture (URL)</label>
                 <input onChange={handleProfilePic} className="input"
                     value={profilePic} type="text" />
 
