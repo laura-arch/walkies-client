@@ -1,8 +1,6 @@
 import React from "react"
 import Logo from "../logo1.png"
 
-
-
 function Home() {
   return (
         <><div className="heading-section">
