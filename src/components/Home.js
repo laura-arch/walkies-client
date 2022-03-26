@@ -1,7 +1,12 @@
 import React from "react"
 import Logo from "../logo1.png"
+import Dogs from "../dogs1.png"
+import Laura from "../laura.jpg"
+import Rex from "../Rex.jpg"
+import Marley from "../MarleyFam.jpg"
+import "../home.css"
 
-
+<link rel="stylesheet" href="home.css"></link>
 
 function Home() {
   return (
@@ -11,7 +16,7 @@ function Home() {
       <h3>Where Walking Wins Wagging Tails</h3>
       <div className="hero-container">
     </div><div className="hero-image">
-
+      <img src = {Dogs} alt= "Group of dogs"/>
       </div>
       <div className="paragraph-1">
         <p>Welcome to Walkies. Where we pride ourselves on bringing joy to humans and wagging tails for dogs!</p>
@@ -47,11 +52,14 @@ function Home() {
       </div>
       <div className="stories-container">
         <h2>Community Stories</h2>
-        <h4>Rex and his borrower Martin</h4>
-        <p>blah blah blah </p>
         <h4>Lucky and his owner Prudence</h4>
+        <img className ="dog-bigger" src = {Marley} alt = "Marley and his owner and borrowers"/>
         <p>blah blah blah </p>
-        <h4>Cheeky and her borrower Natalie</h4>
+        <h4>Rex and his borrower Martin</h4>
+        <img src = {Rex} alt = "Dog and his borrower"/>
+        <p>blah blah blah </p>
+        <h4>Lucky and her borrowers Natalie and Matt</h4>
+        <img className ="dog-bigger" src = {Laura} alt = "Dog and her borrower"/>
         <p>blah blah blah </p>
       </div>
       <button className="get-started-o">Get started as an owner</button>

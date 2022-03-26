@@ -33,6 +33,25 @@ function Nav() {
             <main>
                 <Outlet />
             </main>
+            <div className="footer-container">
+              <div className="social-container">
+                {/* <img></img>
+                <img></img>
+                <img></img> */}
+              </div>
+            <footer>
+              <p className="footer">&copy;Walkies 2022</p>
+              <div className="contact-container">
+              <p className="footer">Contact us:<br>
+              </br><br></br>Phone: 0207 637 289<br>
+              </br>Email: info@walkies.com<br>
+              </br>Address: 129<br></br>
+              Holloway Road<br></br>
+              NW10 7H2</p>
+              </div>
+
+            </footer>
+            </div>
         </>
     );
 }
