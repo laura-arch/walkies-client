@@ -1,7 +1,53 @@
 import React from "react"
 import Logo from "../walkieslogo.png"
+import { useState } from 'react';
 
 function Login() {
+
+    // States for login form
+    const [eMail, setEMail] = useState('')
+    const [password, setPassword] = useState('')
+    const [submitted, setSubmitted] = useState('')
+    const [error, setError] = useState('')
+
+    // Handling input changes
+    const handleEMail = (e) => {
+        setEMail(e.target.value)
+        setSubmitted(false)
+        setError(false)
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value)
+        setSubmitted(false)
+        setError(false)
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if (eMail === "" || password === "") {
+            setError(true)
+        } else {
+            setSubmitted(true)
+        }
+    }
+
+    const successMessage = () => {
+        return (
+            <div style={{display: submitted ? "" : "none"}} >
+                <h2>Login Successful. Redirecting you now...</h2>
+            </div>
+        )
+    }
+
+    const errorMessage = () => {
+        return (
+            <div style={{display: error ? "" : "none"}} >
+                <h2>There was an error. Please check your fields and try again.</h2>
+            </div>
+        )
+    }
+
     return (
 
         <section className = "fullpage">
