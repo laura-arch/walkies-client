@@ -29,6 +29,7 @@ function Login() {
             setError(true)
         } else {
             setSubmitted(true)
+            window.open("/dogs");
         }
     }
 
@@ -58,10 +59,10 @@ function Login() {
                 <section>
                     <form>
                         <label htmlFor="eMail">Email Address:</label><br></br>
-                        <input type="text" id="eMail" name="eMail"></input><br></br>
+                        <input onClick={handleEMail} type="text" id="eMail" name="eMail"></input><br></br>
                         <label htmlFor="password">Password:</label><br></br>
-                        <input type="text" id="password" name="password"></input><br></br>
-                        <input type="submit" value="Submit"></input>
+                        <input onClick={handlePassword} type="text" id="password" name="password"></input><br></br>
+                        <input onClick={handleSubmit} type="submit" value="Submit"></input>
                     </form>
                 </section>
             </div>
