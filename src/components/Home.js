@@ -53,14 +53,14 @@ function Home() {
       </div>
       <div className="stories-container">
         <h2>Community Stories</h2>
-        <h4>Lucky and his owner Prudence</h4>
-        <img className ="dog-bigger" src = {Marley} alt = "Marley and his owner and borrowers"/>
+        <h4>Marley with his family and borrowers!</h4>
+        <img className ="dog-bigger" src = {Marley} alt = "Dog and his owner and borrowers"/>
         <p>blah blah blah </p>
         <h4>Rex and his borrower Martin</h4>
-        <img src = {Rex} alt = "Dog and his borrower"/>
+        <img src = {Rex} alt = "Fluffy cute dog and his borrower"/>
         <p>blah blah blah </p>
-        <h4>Lucky and her borrowers Natalie and Matt</h4>
-        <img className ="dog-bigger" src = {Laura} alt = "Dog and her borrower"/>
+        <h4>Lucky and her borrowers Laura and Matt</h4>
+        <img className ="dog-bigger" src = {Laura} alt = "White dog and her borrower"/>
         <p>blah blah blah </p>
       </div>
       <button className="get-started-o">Get started as an owner</button>

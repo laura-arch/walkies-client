@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../Nav.css"
+import FacebookLogo from "../facebook.png"
+import TwitterLogo from "../twitter.png"
+import InstagramLogo from "../instagram.png"
 
 function Nav() {
     return (
@@ -35,9 +38,9 @@ function Nav() {
             </main>
             <div className="footer-container">
               <div className="social-container">
-                {/* <img></img>
-                <img></img>
-                <img></img> */}
+              <img src ={FacebookLogo} alt ="facebook logo"></img>
+              <img src={TwitterLogo} alt="twitter logo"></img>
+              <img src ={InstagramLogo} alt="instagram logo"></img>
               </div>
             <footer>
               <p className="footer">&copy;Walkies 2022</p>
