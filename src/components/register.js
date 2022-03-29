@@ -117,7 +117,12 @@ function Register() {
             <div>
                 <h1>User Registration 🐶🐾</h1>
             </div>
-
+            {/* Calling to the methods */}
+            <div className="messages">
+                {errorMessage()}
+                {successMessage()}
+            </div>
+            
             <form>
                 {/* Labels and inputs for form data */}
                 <label className="label">Name</label>
@@ -156,11 +161,7 @@ function Register() {
                     Submit
                 </button>
             </form>
-            {/* Calling to the methods */}
-            <div className="messages">
-                {errorMessage()}
-                {successMessage()}
-            </div>
+           
         </div>
     );
 }
