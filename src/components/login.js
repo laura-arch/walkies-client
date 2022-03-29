@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "../walkieslogo.png"
+import Logo from "../assets/walkieslogo.png"
 import { useState } from 'react';
 
 function Login() {

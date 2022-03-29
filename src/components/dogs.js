@@ -20,10 +20,10 @@ async function Dogs() {
 
     
     return (
-        <div>
+        <section>
             <p>Hello</p>
             <p>${dog}</p>
-        </div>
+        </section>
     )
 }
 

@@ -1,9 +1,9 @@
 import React from "react"
-import Logo from "../logo1.png"
-import Dogs from "../dogs1.png"
-import Laura from "../laura.jpg"
-import Rex from "../Rex.jpg"
-import Marley from "../MarleyFam.jpg"
+import Logo from "../assets/logo1.png"
+import Dogs from "../assets/dogs1.png"
+import Laura from "../assets/laura.jpg"
+import Rex from "../assets/Rex.jpg"
+import Marley from "../assets/MarleyFam.jpg"
 import "../home.css"
 
 
