@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../Nav.css"
-import FacebookLogo from "../facebook.png"
-import TwitterLogo from "../twitter.png"
-import InstagramLogo from "../instagram.png"
+import FacebookLogo from "../assets/facebook.png"
+import TwitterLogo from "../assets/twitter.png"
+import InstagramLogo from "../assets/instagram.png"
 
 function Nav() {
     return (
@@ -27,7 +27,7 @@ function Nav() {
                             <Link to="/messages">Messages</Link>
                         </li>
                         <li>
-                            <Link to="/doggo">My Dogs</Link>
+                            <Link to="/dogs/mydog">My Dogs</Link>
                         </li>
 
                     </ul>
