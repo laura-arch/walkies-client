@@ -1,6 +1,5 @@
 import React from "react"
-
-async function Dogs() {
+ function Dogs() {
 
     const [dog, setDog] = React.useState([]);
 
@@ -8,7 +7,7 @@ async function Dogs() {
         console.log("Running useEffect")
         const GetData = async () => {
 
-            const dogData = await fetch(`http://localhost:4000/`)
+            const dogData = await fetch(`https://walkies-backend.herokuapp.com/viewusers`)
             const dogMessage = await dogData.json()
             const dogName = await dogMessage.name
             setDog(dogMessage)
@@ -21,10 +20,10 @@ async function Dogs() {
 
     
     return (
-        <section>
-            <p>Hello</p>
-            <p>${dog}</p>
-        </section>
+       <section>
+           <h2>Hello Doggo</h2>
+         <p>{dog ? dog : 'Bark'}</p>
+       </section>
     )
 }
 
