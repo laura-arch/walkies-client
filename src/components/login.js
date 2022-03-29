@@ -43,7 +43,7 @@ function Login() {
                   }
             })
             .then(response => {
-                console.log(response.data.token);
+                console.log(`api key: ${response.data.token}`);
             })
             .catch(error => {
                 console.log(error);
