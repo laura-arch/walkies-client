@@ -4,12 +4,14 @@ import "../Nav.css"
 import FacebookLogo from "../assets/facebook.png"
 import TwitterLogo from "../assets/twitter.png"
 import InstagramLogo from "../assets/instagram.png"
+import WalkiesLogo from "../assets/logo1.png"
 
 function Nav() {
     return (
         <>
             <header>
                 <nav className="nav-bar">
+                  <img src={WalkiesLogo} alt="Walkies logo"></img>
                     <ul>
                         <li>
                             <Link to="/"> Home</Link>
@@ -38,9 +40,9 @@ function Nav() {
             </main>
             <div className="footer-container">
               <div className="social-container">
-              <img src ={FacebookLogo} alt ="facebook logo"></img>
-              <img src={TwitterLogo} alt="twitter logo"></img>
-              <img src ={InstagramLogo} alt="instagram logo"></img>
+              <a href ="https://www.facebook.com" target="_blank" rel="noreferrer noopener"><img src ={FacebookLogo} alt ="facebook logo"></img></a>
+              <a href ="https://www.twitter.com" target="_blank" rel="noreferrer noopener"><img src ={TwitterLogo} alt ="twitter logo"></img></a>
+              <a href ="https://www.instagram.com" target="_blank" rel="noreferrer noopener"><img src ={InstagramLogo} alt ="instagram logo"></img></a>
               </div>
             <footer>
               <p className="footer">&copy;Walkies 2022</p>
