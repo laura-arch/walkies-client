@@ -1,4 +1,8 @@
 import React from "react";
+import "../App.css"
+
+
+<link rel="stylesheet" href="App.css"></link>
 
 function Doggo() {
 
@@ -23,4 +27,4 @@ function Doggo() {
     )
 }
 
-export default Doggo
+export default Doggo 

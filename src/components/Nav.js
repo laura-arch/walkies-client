@@ -5,6 +5,10 @@ import FacebookLogo from "../assets/facebook.png"
 import TwitterLogo from "../assets/twitter.png"
 import InstagramLogo from "../assets/instagram.png"
 import WalkiesLogo from "../assets/logo1.png"
+import "../Nav.css"
+
+<link rel="stylesheet" href="Nav.css"></link>
+
 
 function Nav() {
     return (
