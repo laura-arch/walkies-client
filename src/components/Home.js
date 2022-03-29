@@ -23,8 +23,14 @@ function Home() {
         <p>Welcome to Walkies. Where we pride ourselves on bringing joy to humans and wagging tails for dogs!</p>
       </div>
       <div className="button-container">
-      <button className="get-started-o">Get started as an owner</button>
-      <button className="get-started-b">Get started as a borrower</button>
+
+      <form action="http://localhost:3000/register">
+                    <input type="submit" value="Get started as an owner" />
+                </form>
+
+      <form action="http://localhost:3000/register">
+                    <input type="submit" value="Get started as a borrower" />
+                </form>
       </div>
       </div>
       <div className="about-us-container">
@@ -55,16 +61,29 @@ function Home() {
         <h2>Community Stories</h2>
         <h4>Marley with his family and borrowers!</h4>
         <img className ="dog-bigger" src = {Marley} alt = "Dog and his owner and borrowers"/>
-        <p>blah blah blah </p>
-        <h4>Rex and his borrower Martin</h4>
+        <p>Marley's borrower and owner recently became friends.<br></br> Marley was chuffed to see his favorite two people in the world at his
+          sister's birthday party!<br></br> Now, Marley's family made a new friend, <br></br>and he gets to spend more time with all his favorite humans! 
+        </p>
+        <h4>Rex and his borrower Mickey</h4>
         <img src = {Rex} alt = "Fluffy cute dog and his borrower"/>
-        <p>blah blah blah </p>
+        <p>Mickey absolutely loves dogs. <br></br>But when he met Rex he fell in love! <br></br>Mickey takes Rex for walks around his favorite park every Thursday,<br></br>
+          as a school teacher,<br></br> he doesn't have much time to have a dog of his own at the moment,<br></br>but he loves taking relaxing walks with Rex! 
+        </p>
         <h4>Lucky and her borrowers Laura and Matt</h4>
         <img className ="dog-bigger" src = {Laura} alt = "White dog and her borrower"/>
-        <p>blah blah blah </p>
+        <p>Laura and Matt are huge dog lovers and they love looking after Lucky. <br></br>As students they unfortunantely don't have all the time<br></br>
+          and resources to have a full-time dog to care for of their own. <br></br>Their dream is to have plenty of dogs one day,<br></br> but for now they 
+          enjoy taking Lucky for walks (and giving her lots of treats!)
+        </p>
       </div>
-      <button className="get-started-o">Get started as an owner</button>
-      <button className="get-started-b">Get started as a borrower</button>
+
+      <form action="http://localhost:3000/register">
+                    <input type="submit" value="Get started as an owner" />
+                </form>
+
+      <form action="http://localhost:3000/register">
+                    <input type="submit" value="Get started as a borrower" />
+                </form>
 
       </>
 
