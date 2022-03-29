@@ -122,7 +122,7 @@ function Register() {
                 {errorMessage()}
                 {successMessage()}
             </div>
-            
+
             <form>
                 {/* Labels and inputs for form data */}
                 <label className="label">Name</label>
@@ -157,7 +157,7 @@ function Register() {
                 <input onChange={handleRole} className="input"
                     value={role} type="text"/>
 
-                <button onClick={handleSubmit} className="btn" type="submit">
+                <button className="button" onClick={handleSubmit} type="submit">
                     Submit
                 </button>
             </form>

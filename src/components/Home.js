@@ -6,6 +6,7 @@ import Rex from "../assets/Rex.jpg"
 import Marley from "../assets/MarleyFam.jpg"
 import "../home.css"
 
+import { Link } from "react-router-dom";
 
 <link rel="stylesheet" href="home.css"></link>
 
@@ -23,10 +24,10 @@ function Home() {
         <p>Welcome to Walkies. Where we pride ourselves on bringing joy to humans and wagging tails for dogs!</p>
       </div>
       <div className="button-container">
-
-      <form action="http://localhost:3000/register">
+       <button> <Link to="/register">Get Started (registerrrrrrrr)</Link></button>
+      {/* <form action="http://localhost:3000/register">
                     <input type="submit" value="Get started as an owner" />
-                </form>
+                </form> */}
 
       <form action="http://localhost:3000/register">
                     <input type="submit" value="Get started as a borrower" />
