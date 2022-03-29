@@ -75,15 +75,6 @@ function Home() {
           enjoy taking Lucky for walks (and giving her lots of treats!)
         </p>
       </div>
-
-      <form action="http://localhost:3000/register">
-                    <input type="submit" value="Get started as an owner" />
-                </form>
-
-      <form action="http://localhost:3000/register">
-                    <input type="submit" value="Get started as a borrower" />
-                </form>
-
       </>
 
 

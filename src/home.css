@@ -36,6 +36,10 @@ p {
   justify-content: space-evenly;
 }
 
+.about-us-container {
+  padding-top: 40px;
+}
+
 input {
   align-items: center;
   background-color: #fee6e3;
