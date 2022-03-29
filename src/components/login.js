@@ -1,6 +1,8 @@
 import React from "react"
 import Logo from "../assets/walkieslogo.png"
 import { useState } from 'react';
+import '../Forms.css'
+import axios from 'axios';
 
 function Login() {
 
@@ -21,6 +23,7 @@ function Login() {
         setPassword(e.target.value)
         setSubmitted(false)
         setError(false)
+        console.log(password)
     }
 
     const handleSubmit = (e) => {
@@ -29,7 +32,24 @@ function Login() {
             setError(true)
         } else {
             setSubmitted(true)
-            window.open("/dogs");
+
+    
+            axios({
+                method: 'post',
+                url: 'https://walkies-backend.herokuapp.com/signin',
+                data: {
+                    "eMail": "laura@doggyHQ.com",
+                    "password": "dogsaremyfave"
+                  }
+            })
+            .then(response => {
+                console.log(response.data.token);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+
+            // window.open("/dogs");
         }
     }
 
@@ -51,20 +71,26 @@ function Login() {
 
     return (
 
-        <section className = "fullpage">
+        <section>
             <div>
-                <img src={Logo} alt = "Walkies Logo" />
-                <h1>Welcome to Walkies!</h1>
+                <div className="form">
                 <h2>Login to your account here:</h2>
+                <div className="messages">
+                    {errorMessage()}
+                    {successMessage()}
+                </div>
                 <section>
                     <form>
-                        <label htmlFor="eMail">Email Address:</label><br></br>
-                        <input onClick={handleEMail} type="text" id="eMail" name="eMail"></input><br></br>
-                        <label htmlFor="password">Password:</label><br></br>
-                        <input onClick={handlePassword} type="text" id="password" name="password"></input><br></br>
-                        <input onClick={handleSubmit} type="submit" value="Submit"></input>
+                        <label className="label" htmlFor="eMail">Email Address:</label><br></br>
+                        <input className="input" onChange={handleEMail} type="text" id="eMail" name="eMail"></input><br></br>
+
+                        <label className="label" htmlFor="password">Password:</label><br></br>
+                        <input className="input" onChange={handlePassword} type="text" id="password" name="password"></input><br></br>
+                        
+                        <input className="btn" onClick={handleSubmit} type="submit" value="Submit"></input>
                     </form>
                 </section>
+                </div>
             </div>
         </section>
     )
