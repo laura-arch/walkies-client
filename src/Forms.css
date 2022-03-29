@@ -79,7 +79,7 @@
 }
 
 .form input[type="submit"],
-.form input[type="button"]
+.button
 {
 	position: relative;
 	display: block;

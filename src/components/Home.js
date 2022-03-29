@@ -8,6 +8,7 @@ import "../home.css"
 import { Link } from "react-router-dom";
 
 
+import { Link } from "react-router-dom";
 
 <link rel="stylesheet" href="home.css"></link>
 
@@ -28,9 +29,11 @@ function Home() {
       <section>
       <div className="about-us-container">
       <div className="button-container">
+      
         <button> <Link to="/register">Get Started as an owner</Link></button>
 
         <button> <Link to="/register">Get Started as a borrower</Link></button>
+
       </div>
         <h2>About us</h2>
         <h2>Our Mission</h2>
