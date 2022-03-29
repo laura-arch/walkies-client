@@ -1,22 +1,36 @@
-import { useState } from 'react';
+
 import '../Forms.css'
+import React from 'react'
+import axios from 'axios'
 
-
-export default function Register() {
+function Register() {
 
     // States for registration
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [profilePic, setProfilePic] = useState('')
-    const [location, setLocation] = useState('')
-    const [aboutMe, setAboutMe] = useState('')
-    const [availability, setAvailability] = useState('')
-    const [role, setRole] = useState('')
+    const [name, setName] = React.useState('');
+    const [email, setEmail] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const [profilePic, setProfilePic] = React.useState('')
+    const [location, setLocation] = React.useState('')
+    const [aboutMe, setAboutMe] = React.useState('')
+    const [availability, setAvailability] = React.useState('')
+    const [role, setRole] = React.useState('')
+    const [user, updateUser] = React.useState('')
 
     // States for checking the errors
-    const [submitted, setSubmitted] = useState(false);
-    const [error, setError] = useState(false);
+    const [submitted, setSubmitted] = React.useState(false);
+    const [error, setError] = React.useState(false);
+ 
+
+    //POST user
+    React.useEffect(async () => {
+        const user = { name: name, eMail: email, password: password, image: profilePic, location: location, aboutMe: aboutMe, availability: availability, role: role };
+        const resp = await axios.post('https://walkies-backend.herokuapp.com/register', user)
+        updateUser(resp)  
+         
+    console.log(resp)
+    }
+  , [])
+    console.log(user)
 
     // Handling the name change
     const handleName = (e) => {
@@ -80,7 +94,7 @@ export default function Register() {
                 style={{
                     display: submitted ? '' : 'none',
                 }}>
-                <h1>User {name} successfully registered!!</h1>
+                <h1>User {name} successfully registered! 🐶🐾 </h1>
             </div>
         );
     };
@@ -101,13 +115,7 @@ export default function Register() {
     return (
         <div className="form">
             <div>
-                <h1>User Registration</h1>
-            </div>
-
-            {/* Calling to the methods */}
-            <div className="messages">
-                {errorMessage()}
-                {successMessage()}
+                <h1>User Registration 🐶🐾</h1>
             </div>
 
             <form>
@@ -132,22 +140,29 @@ export default function Register() {
                 <input onChange={handleLocation} className="input"
                     value={location} type="text" />
 
-                <label className="label">About Me:</label>
+                <label className="label">About Me</label>
                 <input onChange={handleAboutMe} className="input"
                     value={aboutMe} type="text" />
 
-                <label className="label">Availability</label>
+                <label className="label">Availability (Monday-Sunday)</label>
                 <input onChange={handleAvailability} className="input"
                     value={availability} type="text" />
 
-                <label className="label">Are you a</label>
+                <label className="label">Are you a Owner or a Borrower 🐶🐾 </label>
                 <input onChange={handleRole} className="input"
-                    value={role} type="text" />
+                    value={role} type="text"/>
 
                 <button onClick={handleSubmit} className="btn" type="submit">
                     Submit
                 </button>
             </form>
+            {/* Calling to the methods */}
+            <div className="messages">
+                {errorMessage()}
+                {successMessage()}
+            </div>
         </div>
     );
 }
+
+export default Register

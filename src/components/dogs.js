@@ -1,16 +1,16 @@
 import React from "react"
  function Dogs() {
 
-    const [dog, setDog] = React.useState([]);
+    const [dog, setDog] = React.useState(undefined);
 
     React.useEffect(() => {
         console.log("Running useEffect")
         const GetData = async () => {
 
-            const dogData = await fetch(`https://walkies-backend.herokuapp.com/viewusers`)
+            const dogData = await fetch(`https://walkies-backend.herokuapp.com/register`)
             const dogMessage = await dogData.json()
             const dogName = await dogMessage.name
-            setDog(dogMessage)
+            setDog(dogName)
             console.log(dogMessage)
             console.log(dogName)
 
