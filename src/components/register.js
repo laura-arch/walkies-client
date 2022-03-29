@@ -117,6 +117,11 @@ function Register() {
             <div>
                 <h1>User Registration 🐶🐾</h1>
             </div>
+            {/* Calling to the methods */}
+            <div className="messages">
+                {errorMessage()}
+                {successMessage()}
+            </div>
 
             <form>
                 {/* Labels and inputs for form data */}
@@ -152,15 +157,11 @@ function Register() {
                 <input onChange={handleRole} className="input"
                     value={role} type="text"/>
 
-                <button onClick={handleSubmit} className="btn" type="submit">
+                <button className="button" onClick={handleSubmit} type="submit">
                     Submit
                 </button>
             </form>
-            {/* Calling to the methods */}
-            <div className="messages">
-                {errorMessage()}
-                {successMessage()}
-            </div>
+           
         </div>
     );
 }
