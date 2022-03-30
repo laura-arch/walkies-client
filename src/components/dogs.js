@@ -23,16 +23,21 @@ import axios from "axios";
           console.log(response.data);
           setDog(response.data);
           console.log(`Fetching ${response.data[0].name} and friends...`);
-          setDogView(dog.map(x => <><h1>{x.name}</h1><h2>{x.breed}</h2><h2>{x.age}</h2></>))
+          setDogView(dog.map(x => <>
+            <img src=""></img>
+            <h1>{x.name}</h1>
+            <h2>Breed: {x.breed}</h2>
+            <h2>Age: {x.age}</h2>
+            <a href="/dogs/dog"><button>More About Me</button></a>
+            </>))
         })
         .catch(error => {
           console.log(error);
         })
       }, [])
 
-    
     return (
-       <section>
+       <section className="dogsPart">
            <h2>Hello Doggo</h2>
          <p>{dog ? dog[0].name : 'Bark'}</p>
          <p>{dog ? dogView : 'Bark'}</p>
