@@ -7,9 +7,6 @@ import Marley from "../assets/MarleyFam.jpg"
 import "../home.css"
 import { Link } from "react-router-dom";
 
-
-import { Link } from "react-router-dom";
-
 <link rel="stylesheet" href="home.css"></link>
 
 function Home() {
