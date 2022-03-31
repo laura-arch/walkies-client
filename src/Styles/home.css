@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Averia+Sans+Libre:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
+/* TEXTS */
+
 h1 {
   font-family: 'Rampart One', cursive;
   font-size: 100px;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 h2, h4, h3 {
@@ -15,15 +19,28 @@ p {
   font-family: 'Roboto Slab', serif;
 }
 
-.Rex {
-  height: 300px; width: 289px; 
+/* HEADING */
+
+.inline {
+  display: flex;
+  flex-direction: row;
 }
 
-.dog-bigger {
-  height: 300px; width: 340px;
+.inline img {
+  width: 145px;
+  height: 145px;
+  margin-right: 20px;
 }
 
-.dogs-group {
+/* COMMUNITY STORIES */
+
+.story-image {
+  height: 300px;
+  width: auto;
+  max-width: 340px;
+}
+
+.hero-image {
   height: 400px; width: 500px;
 }
 

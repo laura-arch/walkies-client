@@ -1,5 +1,5 @@
 
-import '../Forms.css'
+import '../Styles/Forms.css'
 import React from 'react'
 import axios from 'axios'
 
@@ -22,14 +22,17 @@ function Register() {
  
 
     //POST user
-    React.useEffect(async () => {
-        const user = { name: name, eMail: email, password: password, image: profilePic, location: location, aboutMe: aboutMe, availability: availability, role: role };
-        const resp = await axios.post('https://walkies-backend.herokuapp.com/register', user)
-        updateUser(resp)  
-         
-    console.log(resp)
-    }
-  , [])
+    React.useEffect(() => {
+
+        async function fetchData() {
+            const user = { name: name, eMail: email, password: password, image: profilePic, location: location, aboutMe: aboutMe, availability: availability, role: role };
+            const resp = await axios.post('https://walkies-backend.herokuapp.com/register', user)
+            updateUser(resp)  
+            console.log(resp)
+        }
+
+        fetchData();
+    }, )
     console.log(user)
 
     // Handling the name change

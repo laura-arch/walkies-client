@@ -1,7 +1,6 @@
 import React from "react"
-import Logo from "../assets/walkieslogo.png"
 import { useState } from 'react';
-import '../Forms.css'
+import '../Styles/Forms.css'
 import axios from 'axios';
 
 function Login() {
