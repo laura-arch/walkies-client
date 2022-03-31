@@ -4,8 +4,6 @@ import axios from "axios";
  function Dogs() {
 
     const [dog, setDog] = React.useState(undefined);
-    const [dogView, setDogView] = React.useState(undefined);
-    const [dogImage, setDogImage] = React.useState(undefined);
 
     console.log(localStorage.token)
 
@@ -29,26 +27,22 @@ import axios from "axios";
           setDog(response.data);
           console.log(`Fetching ${response.data[0].name} and friends...`);
 
-          // Adding the dogs to the page
-          setDogView(dog.map(x => <>
-            <img src={x.image}></img>
-            {/* <img src="https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445"></img> */}
-            <h1>{x.name}</h1>
-            <h2>Breed: {x.breed}</h2>
-            <h2>Age: {x.age}</h2>
-            <a href="/dogs/dog"><button>More About Me</button></a>
-            </>))
         })
         .catch(error => {
           console.log(error);
         })
       }, [])
-
     return (
        <section className="dogsPart">
            <h2>Hello Doggos</h2>
-         <p>{dog ? dog[0].name : 'Bark'}</p>
-         <p>{dog ? dogView : 'Bark'}</p>
+         <p>{dog ? dog[1].name : 'Bark'}</p>
+         {dog ? dog.map(x => <>
+            <img src={x.image}></img>
+            <h1>{x.name}</h1>
+            <h2>Breed: {x.breed}</h2>
+            <h2>Age: {x.age}</h2>
+            <a href="/dogs/dog"><button>More About Me</button></a>
+            </>) : <p>Loading</p>}
        </section>
     )
 }
