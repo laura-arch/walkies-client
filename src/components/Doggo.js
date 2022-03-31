@@ -17,6 +17,8 @@ function Doggo() {
                 <h2>Breed:</h2>
                 <h2>Age:</h2>
                 <h3>Description:</h3>
+                <h2>Location:</h2>
+                <h2>Availability</h2>
                 <p>Harold is a lovely 4 months old ...</p>
                 <form action="http://localhost:3000/">
                     <input type="submit" value="Mesage me!" />

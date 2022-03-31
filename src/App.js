@@ -10,6 +10,7 @@ import Register from './components/Register.js'
 import Dogs from './components/Dogs.js'
 import Doggo from './components/Doggo.js'
 import Messages from './components/Messages.js'
+import CreateDog from './components/createDog';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/dogs" element={<Dogs />} />
             <Route path="/dogs/:dogId" element={<Doggo />} />
             <Route path="/messages" element={<Messages />} />
+            <Route path="/create" element={<CreateDog />} />
           </Route>
         </Routes>
       </Router>

@@ -1,5 +1,6 @@
 .nav-bar {
   display: flex;
+  background-color: #1A759F;
 }
 
 ul {
@@ -20,7 +21,7 @@ img {
 }
 
 .footer {
-  background-color: #3c31dd;
+  background-color: #1A759F;
   background-blend-mode: soft-light;
 }
 

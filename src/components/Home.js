@@ -12,8 +12,10 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
         <><div className="heading-section">
-      <h1>Walkies!</h1>
-      <img src = {Logo} alt = "Walkies logo"/>
+      <div className = "inline">
+        <img src = {Logo} alt = "Walkies logo"/>
+        <h1>Walkies!</h1>
+      </div>
       <h3>Where Walking Wins Wagging Tails</h3>
       <div className="hero-container">
     </div><div className="hero-image">
