@@ -4,7 +4,7 @@ import "../Nav.css"
 import FacebookLogo from "../assets/facebook.png"
 import TwitterLogo from "../assets/twitter.png"
 import InstagramLogo from "../assets/instagram.png"
-import WalkiesLogo from "../assets/logo1.png"
+import WalkiesLogo from "../assets/walkieslogo.png"
 import "../Nav.css"
 
 <link rel="stylesheet" href="Nav.css"></link>

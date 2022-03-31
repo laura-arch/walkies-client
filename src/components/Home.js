@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from "../assets/logo1.png"
+import Logo from "../assets/walkieslogo.png"
 import Dogs from "../assets/dogs1.png"
 import Laura from "../assets/laura.jpg"
 import Rex from "../assets/Rex.jpg"
