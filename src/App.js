@@ -1,7 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
 
-import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Nav from './components/Nav';
 import Home from './components/Home.js'
@@ -25,7 +23,7 @@ function App() {
             <Route path="/dogs" element={<Dogs />} />
             <Route path="/dogs/:dogId" element={<Doggo />} />
             <Route path="/messages" element={<Messages />} />
-            <Route path="/create" element={<CreateDog />} />
+            <Route path="/dogs/create" element={<CreateDog />} />
           </Route>
         </Routes>
       </Router>
