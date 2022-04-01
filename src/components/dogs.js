@@ -37,12 +37,11 @@ import "../Styles/dogs.css"
       }, [])
     return (
        <section className="dogs-page">
-           <h2>Hello Doggos</h2>
-         <p>{dog ? dog[1].name : 'Bark'}</p>
+           <h1>Dogs Near You</h1>
          <div className="dogs-list">
           {dog ? dog.map(x => <div className = "dog-profile">
               <img className = "dog-image" alt="Dog" src={x.image}></img>
-              <h1>{x.name}</h1>
+              <h1 className="dog-name">{x.name}</h1>
               <h2>Breed: {x.breed}</h2>
               <h2>Age: {x.age}</h2>
               <a href="/dogs/dog"><button>More About Me</button></a>
