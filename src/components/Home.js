@@ -32,7 +32,7 @@ function Home() {
         <button> <Link to="/register">Get Started as a borrower</Link></button>
 
       </div>
-        <h2>About us</h2>
+        <h2 className="section-title">About us</h2>
         <h2>Our Mission</h2>
         <p>Our mission at Walkies is to connect owners and trusted people in their area who love to look after dogs. 
           Whether you're a loving owner who just doesn't have the time to walk Lucky as much as you'd hope to, or a 
@@ -54,7 +54,7 @@ function Home() {
       </div>
     </section>
     <section className="stories-section">
-        <h2>Community Stories</h2>
+        <h2 className="section-title">Community Stories</h2>
         <div className="stories">
         <div className="community-story">
           <h4>Marley with his family and borrowers!</h4>
