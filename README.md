@@ -117,7 +117,7 @@ One of our wins was working efficiently as a team, organising effectively and ut
 
 #### Challenges 
 
-We had a few challanges - such as connecting to MongoDB, deploying our backend without errors and finally (arguably the largest one) uploading our dog data via the frontend to the our database. Luckily we had the help of our tutors but we always tried to work on the problem for a couple of hours before asking for help. 
+We had a few challanges - such as connecting to MongoDB, deploying our backend without errors and finally (arguably the largest one) uploading our dog data via the frontend to the database successfully. Luckily we had the help of our tutors but we always tried to work on the problem for a couple of hours before asking for help. 
 
 ### Future improvements or changes
 
