@@ -35,7 +35,7 @@ The functionality of Walkies includes:
 
 ![Untitled-2022-03-31-0020](https://user-images.githubusercontent.com/75817925/161280307-a79a28e1-e83e-4cd6-bba9-64ae7e568f6b.png)
 
-Our planning consisted of mostly discussing ideas and their potential caveats or benefits. Once we agreed on an idea, we researched other websites and their functionality and chose what we would like to implement in our own project. As shown above, we used Excalidraw to wireframe our project. Things changed and was edited a few times during the first week, naturally as we progressed deeper into the project and realised potential flaws or caveats in our prior wireframe. 
+Our planning consisted of mostly discussing ideas and their potential caveats or benefits. Once we agreed on an idea, we researched other websites and their functionality and chose what we would like to implement in our own project. As shown above, we used Excalidraw to wireframe our project. Things changed and were edited a few times during the first week, naturally as we progressed deeper into the project and realised potential flaws or caveats in our prior wireframe. 
 A big part of our planning as well as process was using Trello for organisation and predicting our timeline. This helped tremendously with time management and awareness of what needs to be done next during our the process of building our project, from the very start to the very end!
 
 ![Untitled](https://user-images.githubusercontent.com/75817925/161281508-a9f4ac23-2d69-4140-9ad3-8ea52729a37d.png)
