@@ -75,7 +75,7 @@ const CreateDog = () => {
         />
         <input
           type="text"
-          placeholder="Availability (Monday-Sunday"
+          placeholder="Availability (Monday-Sunday)"
           name="availability"
           onChange={onChange}
         />

@@ -8,10 +8,6 @@ main {
   padding: 50px;
 }
 
-/* main * {
-  align-self: center;
-} */
-
 .footer {
   text-align: center;
   color: white;
@@ -84,4 +80,30 @@ a {
 p.footer {
   font-weight: bolder;
   padding: 20px;
+}
+
+.rounded-corners-bottom {
+  height: 40px;
+  width: 100%;
+  background-color: white;
+}
+
+.rounded-corners-bottom-curve {
+  height: 40px;
+  width: 100%;
+  background-color: #99D98C;
+  border-radius: 0% 0% 200% 200%;
+}
+
+.rounded-corners-top {
+  height: 40px;
+  width: 100%;
+  background-color: #1A759F;
+}
+
+.rounded-corners-top-curve {
+  height: 40px;
+  width: 100%;
+  background-color: #99D98C;
+  border-radius: 200% 200% 0% 0%;
 }
