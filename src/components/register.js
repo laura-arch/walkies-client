@@ -2,6 +2,10 @@
 import '../Styles/Forms.css'
 import React from 'react'
 import axios from 'axios'
+import dog1 from '../assets/loginDog1.png'
+import dog2 from '../assets/loginDog2.png'
+
+<link rel="stylesheet" href="../Styles/Form.css"></link>
 
 function Register() {
 
@@ -116,9 +120,12 @@ function Register() {
     };
 
     return (
+        <>
+        <div className="forms-and-photos">
+            <img src = {dog2} alt="dog"></img>
         <div className="form">
             <div>
-                <h1>User Registration 🐶🐾</h1>
+                <h2>User Registration 🐾</h2>
             </div>
             {/* Calling to the methods */}
             <div className="messages">
@@ -166,6 +173,9 @@ function Register() {
             </form>
            
         </div>
+        <img src = {dog1} alt="dog"></img>
+        </div>
+        </>
     );
 }
 

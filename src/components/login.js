@@ -2,6 +2,10 @@ import React from "react"
 import { useState } from 'react';
 import '../Styles/Forms.css'
 import axios from 'axios';
+import dog1 from '../assets/loginDog1.png'
+import dog2 from '../assets/loginDog2.png'
+
+<link rel="stylesheet" href="../Styles/Form.css"></link>
 
 function Login() {
 
@@ -73,9 +77,11 @@ function Login() {
     return (
 
         <section>
-            <div>
+            <div className="forms-and-photos">
+                <img src = {dog2} alt="dog"></img>
                 <div className="form">
-                <h2>Login to your account here:</h2>
+                <h2>User Login 🐾</h2>
+                {/* <h2>Login to your account here:</h2> */}
                 <div className="messages">
                     {errorMessage()}
                     {successMessage()}
@@ -88,10 +94,11 @@ function Login() {
                         <label className="label" htmlFor="password">Password:</label><br></br>
                         <input className="input" onChange={handlePassword} type="text" id="password" name="password"></input><br></br>
                         
-                        <input className="btn" onClick={handleSubmit} type="submit" value="Submit"></input>
+                        <button className="button" onClick={handleSubmit} type="submit">Login</button>
                     </form>
                 </section>
                 </div>
+                <img src = {dog1} alt="dog"></img>
             </div>
         </section>
     )
