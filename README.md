@@ -17,7 +17,7 @@ This project was built for project three of General Assembly's Full-Stack Softwa
 5. Challenges and Wins
 6. Future improvements
 
-#### Project aim 
+### Project aim 
 
 Walkies is a dog borrowing site, inspired by www.borrowmydoggy.com the functionality of Walkies includes:
 
