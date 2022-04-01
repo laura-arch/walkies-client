@@ -42,3 +42,51 @@ A big part of our planning as well as process was using Trello for organisation 
 #### Build
 
 The project utilises React, HTML and CSS. As well as MongoDB, NPM and Mongoose. We used Insomnia and Postman to test our API's data and we stored our data on the MongoDB Atlas cloud at the end of week one. We started by building our backend/API together as a team, we utilised VScode LiveShare and we pushed to the same main branch during this week. During week two, we switched up our workflow, and started using our own Git branches, the reason for this was because on the frontend we split up individual tasks/components, whereas the backend was built together. 
+
+## Backend 
+
+Our backend and client were split up in two seperate files and were two seperate Git repositories. We built a CRUD API to store our User and Dog data. During our process, we didn't use dummy data - rather we opted to upload testing data via apps like Insomnia or Postman. Our backend consists of User schema, Dog schema, middleware for authorization and error handling, a router, and of course, controllers - which held the functions and logic for our API to work. For example: 
+
+```
+// create / list your dog
+
+async function create(req, res, next) {
+  console.log(req)
+  if (!["owner"].includes(req.currentUser.role)) {
+    return res.status(400).json({
+      //     message: "You need to be an owner to create a dog! 🐕",
+    })
+  }
+  const newDog = req.body
+  newDog.createdBy = req.currentUser._id
+  try {
+    const createdDog = await Dog.create(newDog)
+    console.log(createdDog)
+    res.status(201).json(createdDog)
+  } catch (err) {
+    next(err)
+  }
+}
+```
+
+The utilisation of Mongoose made it simple for us to write the logic for our API and what we require it to do it. The built in CRUD related methods for example: 
+
+```
+router.route("/dogs")
+  .get(auth, dogsController.index)
+  .post(auth, dogsController.create)
+
+router.route("/dogs/:dogId")
+  .get(auth, dogsController.show)
+  .put(auth, dogsController.update)
+  .delete(auth, dogsController.remove)
+
+router.route("/messages/:dogId")
+  .get(auth, commentscontroller.show)
+  .post(auth, commentscontroller.create)
+  ```
+  ## Frontend 
+  
+  As this is a React app, we followed the methodology and popular conventions of React apps - such as creating **src** folders and **components**. We first began by creating th
+  
+
