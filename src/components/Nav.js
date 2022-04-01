@@ -44,9 +44,11 @@ function Nav() {
                     </ul>
                 </nav>
             </header>
+            <div className="rounded-corners-top"><div className="rounded-corners-top-curve"></div></div>
             <main>
                 <Outlet />
             </main>
+            <div className="rounded-corners-bottom"><div className="rounded-corners-bottom-curve"></div></div>
             <div className="footer-container">
               <div className="social-container">
               <a href ="https://www.facebook.com" target="_blank" rel="noreferrer noopener"><img className="nav-icon" src ={FacebookLogo} alt ="facebook logo"></img></a>
