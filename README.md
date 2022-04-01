@@ -46,7 +46,7 @@ The project utilises React, HTML and CSS. As well as MongoDB, NPM and Mongoose. 
 
 #### Backend 
 
-Our backend and client were split up in two seperate files and were two seperate Git repositories. We built a CRUD API to store our User and Dog data. During our process, we didn't use dummy data - rather we opted to upload testing data via apps like Insomnia or Postman. Our backend consists of User schema, Dog schema, middleware for authorization and error handling, a router, and of course, controllers - which held the functions and logic for our API to work. For example: 
+Our backend and client were split up in two seperate files and were two seperate Git repositories. We built a CRUD API to let users create dogs/users and to store our User and Dog data. During our process, we didn't use dummy data - rather we opted to upload testing data via apps like Insomnia or Postman. Our backend consists of User schema, Dog schema, middleware for authorization and error handling, a router, and of course, controllers - which held the functions and logic for our API to work. For example: 
 
 ```
 // create / list your dog
@@ -70,7 +70,7 @@ async function create(req, res, next) {
 }
 ```
 
-The utilisation of Mongoose made it simple for us to write the logic for our API and what we require it to do it. The built in CRUD related methods, for example: 
+The utilisation of Mongoose made it more simple for us to write the logic for our API and what we require it to do. The built in CRUD related methods, for example: 
 
 ```
 router.route("/dogs")
