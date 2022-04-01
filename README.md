@@ -19,7 +19,9 @@ This project was built for project three of General Assembly's Full-Stack Softwa
 
 ### Project aim 
 
-Walkies is a dog borrowing site, inspired by www.borrowmydoggy.com the functionality of Walkies includes:
+Walkies is a dog borrowing site, inspired by www.borrowmydoggy.com
+
+The functionality of Walkies includes:
 
 - Register a user
 - Login a user
