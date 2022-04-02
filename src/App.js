@@ -8,7 +8,7 @@ import Register from "./components/Register.js";
 import Dogs from "./components/Dogs.js";
 import Doggo from "./components/Doggo.js";
 import Messages from "./components/Messages.js";
-import CreateDog from "./components/createDog";
+import CreateDog from "./components/CreateDog";
 
 function App() {
   return (
