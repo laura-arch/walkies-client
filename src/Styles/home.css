@@ -51,6 +51,7 @@ a {
   width: auto;
   max-height: 40%;
   max-width: 100%;
+  border-radius: 15px
 }
 
 .hero-image {
@@ -74,7 +75,9 @@ a {
 }
 
 .about-us-container {
-  padding-top: 40px;
+  border: 1px solid black;
+  margin: 30px;
+  background: rgba(204, 204, 204, 0.5);
 }
 
 input {
@@ -223,4 +226,8 @@ button:hover {
   font-family: "Rampart One", cursive;
   font-size: 36px;
   padding: 20px;
+}
+.dog-title {
+  font-family: "Rampart One", cursive;
+  font-size: 20px;
 }

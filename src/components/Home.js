@@ -27,7 +27,7 @@ function Home() {
         </div>
       </section>
       <section className="about-section">
-        <div className="about-us-container">
+        
           <div className="button-container">
             <button>
               {" "}
@@ -38,8 +38,8 @@ function Home() {
               {" "}
               <Link to="/register">Get Started as a borrower</Link>
             </button>
-          </div>
-          <h2 className="section-title">About us</h2>
+          </div><h2 className="section-title">About us</h2>
+          <div className="about-us-container">
           <h2>Our Mission</h2>
           <p>
             Our mission at Walkies is to connect owners and trusted people in
@@ -66,19 +66,21 @@ function Home() {
             With Walkies our main mission is to spread joy to both dogs and
             humans alike. Sound good? Join us on our quest of spreading joy!
           </p>
+          <br /> 
+          <br />
         </div>
       </section>
       <section className="stories-section">
         <h2 className="section-title">Community Stories</h2>
         <div className="stories">
           <div className="community-story">
-            <h4>Marley with his family and borrowers!</h4>
+            <h4>Marley with his family and borrowers</h4>
             <img
               className="story-image"
               src={Marley}
               alt="Dog and his owner and borrowers"
             />
-            <p>
+            <p className="p-text">
               Marley's borrower and owner recently became friends.<br></br>{" "}
               Marley was chuffed to see his favorite two people in the world at
               his sister's birthday party!<br></br> Now, Marley's family made a
@@ -93,7 +95,7 @@ function Home() {
               src={Rex}
               alt="Fluffy cute dog and his borrower"
             />
-            <p>
+            <p className="p-text">
               Mickey absolutely loves dogs. <br></br>But when he met Rex he fell
               in love! <br></br>Mickey takes Rex for walks around his favorite
               park every Thursday,<br></br>
@@ -109,8 +111,8 @@ function Home() {
               src={Laura}
               alt="White dog and her borrower"
             />
-            <p>
-              Laura and Matt are huge dog lovers and they love looking after
+            <p className="p-text">
+              Laura and Matt are huge dog lsovers and they love looking after
               Lucky. <br></br>As students they unfortunantely don't have all the
               time<br></br>
               and resources to have a full-time dog to care for of their own.{" "}
