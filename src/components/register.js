@@ -5,89 +5,32 @@ import axios from 'axios'
 
 function Register() {
 
-    // States for registration
-    const [name, setName] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [profilePic, setProfilePic] = React.useState('')
-    const [location, setLocation] = React.useState('')
-    const [aboutMe, setAboutMe] = React.useState('')
-    const [availability, setAvailability] = React.useState('')
-    const [role, setRole] = React.useState('')
-    const [user, updateUser] = React.useState('')
-
     // States for checking the errors
     const [submitted, setSubmitted] = React.useState(false);
     const [error, setError] = React.useState(false);
- 
+    const [formData, setFormData] = React.useState({})
 
-    //POST user
-    React.useEffect(() => {
-
-        async function fetchData() {
-            const user = { name: name, eMail: email, password: password, image: profilePic, location: location, aboutMe: aboutMe, availability: availability, role: role };
-            const resp = await axios.post('https://walkies-backend.herokuapp.com/register', user)
-            updateUser(resp)  
-            console.log(resp)
-        }
-
-        fetchData();
-    }, )
-    console.log(user)
-
-    // Handling the name change
-    const handleName = (e) => {
-        setName(e.target.value);
+    // Handling onChange
+    const onChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
         setSubmitted(false);
-    };
-
-    // Handling the email change
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
-        setSubmitted(false);
-    };
-
-    // Handling the password change
-    const handlePassword = (e) => {
-        setPassword(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleProfilePic = (e) => {
-        setProfilePic(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleLocation = (e) => {
-        setLocation(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleAboutMe = (e) => {
-        setAboutMe(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleAvailability = (e) => {
-        setAvailability(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleRole = (e) => {
-        setRole(e.target.value);
-        setSubmitted(false);
-    };
+    }
 
     // Handling the form submission
-    const handleSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
-        if (name === '' || email === '' || password === '' || profilePic === '' || location === '' || aboutMe === '' || availability === '' || role === '') {
-            setError(true);
-        } else {
+
+        try {
+            const resp = await axios.post('https://walkies-backend.herokuapp.com/register', formData)
+            console.log(resp)
             setSubmitted(true);
             setError(false);
         }
+        catch (e) {
+            setError(e.response.data.message)
+        }
     };
+
 
     // Showing success message
     const successMessage = () => {
@@ -97,7 +40,7 @@ function Register() {
                 style={{
                     display: submitted ? '' : 'none',
                 }}>
-                <h1>User {name} successfully registered! 🐶🐾 </h1>
+                <h1>User successfully registered! 🐶🐾 </h1>
             </div>
         );
     };
@@ -121,50 +64,50 @@ function Register() {
                 <h1>User Registration 🐶🐾</h1>
             </div>
             {/* Calling to the methods */}
+          
+
+            <form onSubmit={onSubmit}>
+                {/* Labels and inputs for form data */}
+                <label className="label">Name</label>
+                <input onChange={onChange} className="input"
+                    name='name' type="text" />
+
+                <label className="label">Email</label>
+                <input onChange={onChange} className="input"
+                    name='email' type="email" />
+
+                <label className="label">Password</label>
+                <input onChange={onChange} className="input"
+                    name='password' type="password" />
+
+                <label className="label">Profile picture (URL)</label>
+                <input onChange={onChange} className="input"
+                    name='profilePic' type="text" />
+
+                <label className="label">Location</label>
+                <input onChange={onChange} className="input"
+                    name= 'location' type="text" />
+
+                <label className="label">About Me</label>
+                <input onChange={onChange} className="input"
+                    name='aboutMe' type="text" />
+
+                <label className="label">Availability (Monday-Sunday)</label>
+                <input onChange={onChange} className="input"
+                    name='availability' type="text" />
+
+                <label className="label">Are you a Owner or a Borrower 🐶🐾 </label>
+                <input onChange={onChange} className="input"
+                    name='role' type="text"/>
+
+                <button className="button" type="submit">
+                    Submit
+                </button>
+            </form>
             <div className="messages">
                 {errorMessage()}
                 {successMessage()}
             </div>
-
-            <form>
-                {/* Labels and inputs for form data */}
-                <label className="label">Name</label>
-                <input onChange={handleName} className="input"
-                    value={name} type="text" />
-
-                <label className="label">Email</label>
-                <input onChange={handleEmail} className="input"
-                    value={email} type="email" />
-
-                <label className="label">Password</label>
-                <input onChange={handlePassword} className="input"
-                    value={password} type="password" />
-
-                <label className="label">Profile picture (URL)</label>
-                <input onChange={handleProfilePic} className="input"
-                    value={profilePic} type="text" />
-
-                <label className="label">Location</label>
-                <input onChange={handleLocation} className="input"
-                    value={location} type="text" />
-
-                <label className="label">About Me</label>
-                <input onChange={handleAboutMe} className="input"
-                    value={aboutMe} type="text" />
-
-                <label className="label">Availability (Monday-Sunday)</label>
-                <input onChange={handleAvailability} className="input"
-                    value={availability} type="text" />
-
-                <label className="label">Are you a Owner or a Borrower 🐶🐾 </label>
-                <input onChange={handleRole} className="input"
-                    value={role} type="text"/>
-
-                <button className="button" onClick={handleSubmit} type="submit">
-                    Submit
-                </button>
-            </form>
-           
         </div>
     );
 }
