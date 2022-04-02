@@ -4,7 +4,7 @@ import "../Styles/Forms.css";
 
 const CreateDog = () => {
   const [formData, setFormData] = useState({
-    image: "",
+    image: "https://moderndogmagazine.com/sites/default/files/images/articles/top_images/bigstock-black-dalmatian-dog-outdoors-i-96150509.png",
     comments: {
       text: "",
       createdBy: "",
