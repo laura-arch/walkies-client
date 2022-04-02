@@ -138,7 +138,7 @@ input:hover {
   }
 }
 
-button {
+/* button {
   position: relative;
   display: block;
   color: #fff;
@@ -151,7 +151,7 @@ button {
   border: 1px solid #1a759f;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
-}
+} */
 
 button {
   background: #168aad;
@@ -226,8 +226,4 @@ button:hover {
   font-family: "Rampart One", cursive;
   font-size: 36px;
   padding: 20px;
-}
-.dog-title {
-  font-family: "Rampart One", cursive;
-  font-size: 20px;
 }
