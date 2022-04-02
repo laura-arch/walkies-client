@@ -1,6 +1,6 @@
 ## Walkies - Group Project
 
-Deployed at:
+Deployed at: https://walkiessei22.netlify.app/
 
 This project was lovingly made by [Ava](https://github.com/avayazdan), [Claudia](https://github.com/claudiatmcp) and [Laura](https://github.com/laura-arch).
 
