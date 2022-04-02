@@ -10,122 +10,27 @@ function Register() {
   // States for checking the errors
   const [submitted, setSubmitted] = React.useState(false);
   const [error, setError] = React.useState(false);
-  const [formData, setFormData] = React.useState({});
+  const [formData, setFormData] = React.useState({})
+
 
   // Handling onChange
   const onChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value })
     setSubmitted(false);
-  };
+  }
 
   // Handling the form submission
   const onSubmit = async (e) => {
-      console.log(formData)
     e.preventDefault();
 
-    //POST user
-    React.useEffect(() => {
-
-        async function fetchData() {
-            const user = { name: name, eMail: email, password: password, image: profilePic, location: location, aboutMe: aboutMe, availability: availability, role: role };
-            const resp = await axios.post('https://walkies-backend.herokuapp.com/register', user)
-            updateUser(resp)  
-            console.log(resp)
-        }
-
-        fetchData();
-    }, )
-    console.log(user)
-
-    // Handling the name change
-    const handleName = (e) => {
-        setName(e.target.value);
-        setSubmitted(false);
-    };
-
-    // Handling the email change
-    const handleEmail = (e) => {
-        setEmail(e.target.value);
-        setSubmitted(false);
-    };
-
-    // Handling the password change
-    const handlePassword = (e) => {
-        setPassword(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleProfilePic = (e) => {
-        setProfilePic(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleLocation = (e) => {
-        setLocation(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleAboutMe = (e) => {
-        setAboutMe(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleAvailability = (e) => {
-        setAvailability(e.target.value);
-        setSubmitted(false);
-    };
-
-    const handleRole = (e) => {
-        setRole(e.target.value);
-        setSubmitted(false);
-    };
-
-    // Handling the form submission
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (name === '' || email === '' || password === '' || profilePic === '' || location === '' || aboutMe === '' || availability === '' || role === '') {
-            setError(true);
-        } else {
-            setSubmitted(true);
-            setError(false);
-        }
-    };
-
-    // Showing success message
-    const successMessage = () => {
-        return (
-            <div
-                className="success"
-                style={{
-                    display: submitted ? '' : 'none',
-                }}>
-                <h2>User {name} successfully registered! 🐶🐾 </h2>
-            </div>
-        );
-    };
-
-    // Showing error message if error is true
-    const errorMessage = () => {
-        return (
-            <div
-                className="error"
-                style={{
-                    display: error ? '' : 'none',
-                }}>
-                <h2>Please enter all the fields</h2>
-            </div>
-        );
-    };
     try {
-      const resp = await axios.post(
-        "https://walkies-backend.herokuapp.com/register",
-        formData
-      );
-      console.log(resp);
+      const resp = await axios.post('https://walkies-backend.herokuapp.com/register', formData)
+      console.log(resp)
       setSubmitted(true);
       setError(false);
-    } catch (e) {
-      setError(e.response.data.message);
+    }
+    catch (e) {
+      setError(e.response.data.message)
     }
   };
 
@@ -135,9 +40,8 @@ function Register() {
       <div
         className="success"
         style={{
-          display: submitted ? "" : "none",
-        }}
-      >
+          display: submitted ? '' : 'none',
+        }}>
         <h1>User successfully registered! 🐶🐾 </h1>
       </div>
     );
@@ -149,9 +53,8 @@ function Register() {
       <div
         className="error"
         style={{
-          display: error ? "" : "none",
-        }}
-      >
+          display: error ? '' : 'none',
+        }}>
         <h1>Please enter all the fields</h1>
       </div>
     );
