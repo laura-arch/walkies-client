@@ -23,6 +23,99 @@ function Register() {
       console.log(formData)
     e.preventDefault();
 
+    //POST user
+    React.useEffect(() => {
+
+        async function fetchData() {
+            const user = { name: name, eMail: email, password: password, image: profilePic, location: location, aboutMe: aboutMe, availability: availability, role: role };
+            const resp = await axios.post('https://walkies-backend.herokuapp.com/register', user)
+            updateUser(resp)  
+            console.log(resp)
+        }
+
+        fetchData();
+    }, )
+    console.log(user)
+
+    // Handling the name change
+    const handleName = (e) => {
+        setName(e.target.value);
+        setSubmitted(false);
+    };
+
+    // Handling the email change
+    const handleEmail = (e) => {
+        setEmail(e.target.value);
+        setSubmitted(false);
+    };
+
+    // Handling the password change
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleProfilePic = (e) => {
+        setProfilePic(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleLocation = (e) => {
+        setLocation(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleAboutMe = (e) => {
+        setAboutMe(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleAvailability = (e) => {
+        setAvailability(e.target.value);
+        setSubmitted(false);
+    };
+
+    const handleRole = (e) => {
+        setRole(e.target.value);
+        setSubmitted(false);
+    };
+
+    // Handling the form submission
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (name === '' || email === '' || password === '' || profilePic === '' || location === '' || aboutMe === '' || availability === '' || role === '') {
+            setError(true);
+        } else {
+            setSubmitted(true);
+            setError(false);
+        }
+    };
+
+    // Showing success message
+    const successMessage = () => {
+        return (
+            <div
+                className="success"
+                style={{
+                    display: submitted ? '' : 'none',
+                }}>
+                <h2>User {name} successfully registered! 🐶🐾 </h2>
+            </div>
+        );
+    };
+
+    // Showing error message if error is true
+    const errorMessage = () => {
+        return (
+            <div
+                className="error"
+                style={{
+                    display: error ? '' : 'none',
+                }}>
+                <h2>Please enter all the fields</h2>
+            </div>
+        );
+    };
     try {
       const resp = await axios.post(
         "https://walkies-backend.herokuapp.com/register",
