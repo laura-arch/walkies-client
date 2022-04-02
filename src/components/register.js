@@ -101,7 +101,7 @@ function Register() {
                 style={{
                     display: submitted ? '' : 'none',
                 }}>
-                <h1>User {name} successfully registered! 🐶🐾 </h1>
+                <h2>User {name} successfully registered! 🐶🐾 </h2>
             </div>
         );
     };
@@ -114,7 +114,7 @@ function Register() {
                 style={{
                     display: error ? '' : 'none',
                 }}>
-                <h1>Please enter all the fields</h1>
+                <h2>Please enter all the fields</h2>
             </div>
         );
     };

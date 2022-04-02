@@ -1,6 +1,9 @@
 function Messages() {
     return (
-        <div>Hello</div>
+        <>
+        <h1>Messages</h1>
+        <p>Bark! I'm looking forward to your messages.</p>
+        </>
     )
 }
 
