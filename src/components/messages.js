@@ -1,12 +1,16 @@
 import React from "react";
 import axios from "axios";
-// ${x._id}
+import {  useParams } from "react-router-dom";
+
+
 function Messages() {
   const [messages, updateMessages] = React.useState("");
+  const { dogId } = useParams();
+console.log('this is the second dog id from messages ',dogId)
   React.useEffect(() => {
     axios({
       method: "get",
-        url: `https://walkies-backend.herokuapp.com/dogs/`,
+        url: `https://walkies-backend.herokuapp.com/messages/${dogId}`,
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -27,7 +31,7 @@ function Messages() {
         <br />
         <h3>See what other users have been saying about your dogs.</h3>
       </div>
-      {messages ? (
+      {/* {messages ? (
         messages.map((x) => (
           <div className="dog-profile">
             <br /> <h2>{x.name}</h2>
@@ -38,7 +42,7 @@ function Messages() {
         ))
       ) : (
         <p>Loading your messages 🐾</p>
-      )}
+      )} */}
     </section>
   );
 }

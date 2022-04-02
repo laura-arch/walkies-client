@@ -23,9 +23,6 @@ function Nav() {
                 <Link to="/dogs"> View Dogs</Link>
               </li>
               <li>
-                <Link to="/dogs/mydog">My Dogs</Link>
-              </li>
-              <li>
                 <Link to="/dogs/create">Create Dog</Link>
               </li>
               <li>
