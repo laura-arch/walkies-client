@@ -30,6 +30,11 @@ console.log('this is the second dog id from messages ',dogId)
         <h1>Hello, Human! 🐶 🐾</h1>
         <br />
         <h3>See what other users have been saying about your dogs.</h3>
+
+
+        <div>
+          <h2>Joanna to Emmet:</h2><p>Hey, I really liked Emmet! I am free on Tuesday, would that work for you so I can walk him? Thanks! :)</p>
+        </div>
       </div>
       {/* {messages ? (
         messages.map((x) => (
