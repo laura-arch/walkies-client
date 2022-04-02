@@ -45,7 +45,7 @@ const CreateDog = () => {
   }
 
   return (
-    <div>
+    <div className="create-dog-section">
       <h1>Add a pet 🐶🐾</h1>
       {errorMessage && <div className="failure">{errorMessage}</div>}
       <form className = "form" onSubmit={onSubmit}>

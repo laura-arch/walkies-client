@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
   margin: 16px;
 }
 
@@ -26,4 +25,33 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+/* INDIVIDUAL ICONS */
+
+button {
+  position: relative;
+	display: block;
+	color: #FFF;
+	margin: 0 auto;
+	background: #168AAD;
+	font-size: 18px;
+	text-align: center;
+	font-style: normal;
+	width: 100%;
+	border: 1px solid #1A759F;
+	border-width: 1px 1px 3px;
+	margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.dog-name {
+  margin-bottom: 10px;
+}
+
+h2 {
+  padding-bottom: 8px;
 }

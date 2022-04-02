@@ -1,10 +1,10 @@
 
 .form{
-	max-width: 500px;
+	width: 500px;
 	padding: 10px 20px;
 	background: #C9EBC2;
 	background: #f4f7f8;
-	margin: 10px auto;
+	margin: 10px 10px;
 	padding: 20px;
 	border-radius: 8px;
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -85,13 +85,11 @@
 	display: block;
 	color: #FFF;
 	margin: 0 auto;
-	/* background: #1abc9c; */
 	background: #168AAD;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	width: 100%;
-	/* border: 1px solid #16a085; */
 	border: 1px solid #1A759F;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
@@ -100,4 +98,27 @@
 .form input[type="button"]:hover
 {
 	background: #109177;
+}
+
+h2 {
+	margin-bottom: 35px; 
+}
+
+.forms-and-photos {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+img {
+	height: 200px;
+	width: auto;
+	align-self: center;
+	justify-self: center;
+}
+
+.create-dog-section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }

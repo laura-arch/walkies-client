@@ -1,20 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
-main {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  background: #99D98C;
-  padding: 50px;
-}
-
-.footer {
-  text-align: center;
-  color: white;
-  font-family: 'Roboto Slab', serif;
-  margin-left: 5px;
-  margin-right: 5px;
-}
+/* HEADER */
 
 .float-left a, .float-right a {
   text-align: center;
@@ -22,6 +8,14 @@ main {
   font-family: 'Roboto Slab', serif;
   margin-left: 5px;
   margin-right: 5px;
+}
+
+main {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background: #99D98C;
+  padding: 50px;
 }
 
 .nav-bar {
@@ -72,6 +66,16 @@ a {
   padding-right: 15px;
 }
 
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .footer {
   background-color: #1A759F;
   background-blend-mode: soft-light;
@@ -81,6 +85,8 @@ p.footer {
   font-weight: bolder;
   padding: 20px;
 }
+
+/* Rounding the edges around the main section */
 
 .rounded-corners-bottom {
   height: 40px;

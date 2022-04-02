@@ -14,17 +14,20 @@ input {
 	display: block;
 	color: #FFF;
 	margin: 0 auto;
-	/* background: #1abc9c; */
     background: #168AAD;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	width: 50%;
-	/* border: 1px solid #16a085; */
     border: 1px solid #1A759F;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
 }
+
+input:active {
+    background-color: #B5E48C;
+    outline: 0;
+  }
 
 @media only screen and (max-width: 550px) {
     input {

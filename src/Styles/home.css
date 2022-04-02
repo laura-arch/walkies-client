@@ -19,6 +19,11 @@ p {
   font-family: 'Roboto Slab', serif;
 }
 
+.about-us-container > p {
+  max-width: 70%;
+  margin: auto;
+}
+
 a {
   font-size: 16px;
   color: #FFFFFF;
@@ -40,9 +45,10 @@ a {
 /* COMMUNITY STORIES */
 
 .story-image {
-  height: 300px;
+  height: auto;
   width: auto;
-  max-width: 340px;
+  max-height: 40%;
+  max-width: 100%;
 }
 
 .hero-image {
@@ -51,6 +57,12 @@ a {
 
 .stories {
   display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.community-story {
+  width: 25%;
 }
 
 .button-container {
@@ -125,13 +137,11 @@ button {
 	display: block;
 	color: #FFF;
 	margin: 0 auto;
-	/* background: #1abc9c; */
     background: #168AAD;
 	font-size: 18px;
 	text-align: center;
 	font-style: normal;
 	width: 50%;
-	/* border: 1px solid #16a085; */
     border: 1px solid #1A759F;
 	border-width: 1px 1px 3px;
 	margin-bottom: 10px;
@@ -197,11 +207,17 @@ button:hover {
 }
 
 .heading-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 260px;
-    padding-top: 100px;
-    background: #99D98C;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 260px;
+  padding-top: 100px;
+  background: #99D98C;
+}
+
+.section-title {
+  font-family: 'Rampart One', cursive;
+  font-size: 36px;
+  padding: 20px;
 }
