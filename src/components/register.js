@@ -20,6 +20,7 @@ function Register() {
 
   // Handling the form submission
   const onSubmit = async (e) => {
+      console.log(formData)
     e.preventDefault();
 
     try {
@@ -87,7 +88,7 @@ function Register() {
             <input
               onChange={onChange}
               className="input"
-              name="email"
+              name="eMail"
               type="email"
             />
 
@@ -103,7 +104,7 @@ function Register() {
             <input
               onChange={onChange}
               className="input"
-              name="profilePic"
+              name="image"
               type="text"
             />
 

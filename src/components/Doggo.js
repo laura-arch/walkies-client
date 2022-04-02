@@ -12,7 +12,7 @@ function Doggo() {
     console.log("this is dogId ", dogId);
     axios({
       method: "get",
-      url: `https://walkies-backend.herokuapp.com/dogs/${dogId}`,
+        url: `https://walkies-backend.herokuapp.com/dogs/${dogId}`,
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -69,7 +69,7 @@ function Doggo() {
             </div>) : <p>Loading</p>}
             
             use this for messages endpoint ${x._id} */}
-      <Link to={`/messages/`}>
+          <Link to={`/messages/`}>
         <button>Message me 🐾</button>
       </Link>
     </>

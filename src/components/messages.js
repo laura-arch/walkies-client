@@ -1,12 +1,12 @@
 import React from "react";
 import axios from "axios";
-
+// ${x._id}
 function Messages() {
   const [messages, updateMessages] = React.useState("");
   React.useEffect(() => {
     axios({
       method: "get",
-      url: "https://walkies-backend.herokuapp.com/dogs",
+        url: `https://walkies-backend.herokuapp.com/dogs/`,
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
