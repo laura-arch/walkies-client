@@ -60,26 +60,17 @@ const CreateDog = () => {
   const onSubmit = async (e) => {
     console.log(formData)
     e.preventDefault();
-
-    axios({
-      method: 'post',
-      url: 'https://walkies-backend.herokuapp.com/dogs',
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-      body: formData
-    })
-    .then(response => {
-      setFormData(response.data)
-      // Console logging the data
-      console.log(`doggo data: `);
-      console.log(response.data);
-
-    })
-    .catch(error => {
-      console.log(error);
-    })
-}
+    try {
+      const config = {headers: {Authorization: `Bearer ${localStorage.getItem("token")}`}}
+      const resp = await axios.post('https://walkies-backend.herokuapp.com/dogs', formData, config)
+      console.log(resp)
+      setSubmitted(true);
+      setError(false);
+    }
+    catch (e) {
+      setError(e.response.data.message)
+    }
+  }
 
   // Showing success message
   const successMessage = () => {
