@@ -1,7 +1,7 @@
 import React from "react"
 import axios from "axios";
 import "../Styles/dogs.css"
-
+import { Link } from 'react-router-dom'
 <link rel="stylesheet" href="../Styles/dogs.css"></link>
 
  function Dogs() {
@@ -37,14 +37,16 @@ import "../Styles/dogs.css"
       }, [])
     return (
        <section className="dogs-page">
+
            <h1>Dogs Near You</h1>
+
          <div className="dogs-list">
           {dog ? dog.map(x => <div className = "dog-profile">
               <img className = "dog-image" alt="Dog" src={x.image}></img>
               <h1 className="dog-name">{x.name}</h1>
               <h2>Breed: {x.breed}</h2>
               <h2>Age: {x.age}</h2>
-              <a href="/dogs/dog"><button>More About Me</button></a>
+              <Link to ={`/dogs/${x._id}`}><button>More About Me</button></Link>
               </div>) : <p>Loading</p>}
           </div>
        </section>
