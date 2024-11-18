@@ -2,11 +2,14 @@
 
 Deployed at: https://walkiessei22.netlify.app/
 
+<img width="1420" alt="Screenshot 2024-11-18 at 15 52 44" src="https://github.com/user-attachments/assets/646a9e66-7559-4d48-a39a-736ca1720b86">
+
+
 This project was lovingly made by [Ava](https://github.com/avayazdan), [Claudia](https://github.com/claudiatmcp) and [Laura](https://github.com/laura-arch).
 
 ## Project Requirements
 
-This project was built for project three of General Assembly's Full-Stack Software Engineering course. The project aim was to build our own API, utilise our growing knowledge of React as well as connecting backend to frontend for the first time. The project specs allowed us to take inspiration from complex websites/apps that use data such as AirBnb or Facebook, and essentially rebuild it in our own way if we desire.
+This project was built for project three of General Assembly's Full-Stack Software Engineering course. The project aim was to build our own API, utilise our growing knowledge of React as well as connecting backend to frontend for the first time. The project specs allowed us to take inspiration from complex websites/apps that use data such as AirBnb or Facebook, and essentially rebuild it in our own way. We had a 2 week timeframe for this project.
 
 ### Table of contents 
 
@@ -36,13 +39,13 @@ The functionality of Walkies includes:
 ![Untitled-2022-03-31-0020](https://user-images.githubusercontent.com/75817925/161280307-a79a28e1-e83e-4cd6-bba9-64ae7e568f6b.png)
 
 Our planning consisted of mostly discussing ideas and their potential caveats or benefits. Once we agreed on an idea, we researched other websites and their functionality and chose what we would like to implement in our own project. As shown above, we used Excalidraw to wireframe our project. Naturally, as we progressed deeper into our project and realised potential flaws or caveats, elements of our wirefrime were changed or edited to suit the new functionalities or elements.
-A big part of our planning as well as process was using Trello for organisation and predicting our timeline. This helped tremendously with time management and awareness of what needs to be done next during our the process of building our project. 
+A big part of our planning as well as process was using Trello for organisation and predicting our timeline. This helped tremendously with time management and awareness of what needs to be done next during our the process of building our project. We used a group chat in Slack to communicate and we hosted personal meetings on Zoom outside class time to work on things together, sometimes in pairs and sometimes all three of us. We made sure to work around and be considerate of everyone’s schedule.
 
 ![Untitled](https://user-images.githubusercontent.com/75817925/161281508-a9f4ac23-2d69-4140-9ad3-8ea52729a37d.png)
 
 ### Build
 
-The project utilises React, HTML and CSS. As well as MongoDB, NPM and Mongoose. We used Insomnia and Postman to test our API's data and we stored our data on the MongoDB Atlas cloud at the end of week one. We started by building our backend/API together as a team, we utilised VScode LiveShare and we pushed to the same main branch during this week. During week two, we switched up our workflow, and started using our own Git branches, the reason for this was because on the frontend we split up individual tasks/components, whereas the backend was built together. 
+The project utilises React, HTML, CSS, MongoDB, NPM and Mongoose. We used Insomnia and Postman to test our API's data and we stored our data on the MongoDB Atlas cloud at the end of week one. We started by building our backend/API together as a team, we utilised VScode LiveShare and we pushed to the same main branch during this week. During week two, we switched up our workflow, and started using our own Git branches, because on the frontend we split up individual tasks/components, whereas the backend was built together. 
 
 #### Backend 
 
@@ -113,7 +116,7 @@ Our styling was inspired by colourful and animated websites surrounding our chos
 
 #### Wins
 
-One of our wins was working efficiently as a team, organising effectively and utilising the tools available to us effectively. Another win was accepting kind critisim  from each other on small things that we may have different opinions on, we listened to eachother with respect and no one overuled one another, it could even be argued that we mastered the skill of working efficiently as a team in a short amount of time! Speaking of time - that was another win of ours. We moved with quick pacing fromt the very get go and that could also be down to our efficient organisation methods and skills. 
+One of our wins was working efficiently as a team, organising effectively and utilising the tools available to us effectively. Another win was accepting kind critisim  from each other on small things that we may have different opinions on, we listened to eachother with respect and no one overuled one another, it could even be argued that we mastered the skill of working efficiently as a team in a short amount of time! Speaking of time - that was another win of ours. We moved with quick pacing from the very get go and that could also be down to our efficient organisation methods and skills. 
 
 #### Challenges 
 
@@ -123,6 +126,7 @@ We had a few challanges - such as connecting to MongoDB, deploying our backend w
 
 A Favorites page would be a great addition to our project (adding a dog or a borrower to your favorites, storing them for later). Another improvement would be implementing a chat messenger where users can interact with eachother in real time. 
 
+![walkieslogo](https://github.com/user-attachments/assets/0082225b-9a98-40d0-bcc7-20a8965fdbe2)
 
 
   
